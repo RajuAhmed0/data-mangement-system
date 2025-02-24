@@ -52,10 +52,16 @@ app.listen(PORT, () => {
 
 });
 
-app.get('/studentsinfo', (req, res)=>{
+app.get('/studentsinfo', (req, res) => {
   res.send(studentsinfo)
 });
 
+app.post('/studentsinfo', (req, res) => {
+  const data = req.body
+  console.log(data);
+  res.send("data resive succesfully")
+
+})
 
 
 
